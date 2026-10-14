@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-garden-deep: #0b1410;
+  --color-garden-forest: #14231b;
+  --color-garden-sage: #8fa89b;
+  --color-garden-leaf: #3e885b;
+  --color-garden-emerald: #2f7a4e;
+  --color-garden-gold: #e2ba64;
+  --color-garden-sun: #f7d27e;
+  --color-garden-cream: #f4eee1;
+}
+
+:root {
+  font-family: var(--font-sans);
+  color-scheme: dark;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Organic breathing animation for garden atmosphere */
+@keyframes ambientBreathe {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.015) translateY(-3px);
+  }
+}
+
+@keyframes gentleSway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0.8deg);
+  }
+  75% {
+    transform: rotate(-0.8deg);
+  }
+}
+
+@keyframes sunRaysPulse {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes waterRipple {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* Stage 5 'In Full Bloom' CSS Keyframe Animations: Pulse and Slow Rotation */
+@keyframes flowerBloomRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes flowerPetalPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 6px rgba(250, 204, 21, 0.45));
+  }
+  50% {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 22px rgba(250, 204, 21, 0.9));
+  }
+}
+
+@keyframes petalIndividualBreathe {
+  0%, 100% {
+    transform: scaleY(1) scaleX(1);
+    opacity: 0.92;
+  }
+  50% {
+    transform: scaleY(1.15) scaleX(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes flowerAuraGlow {
+  0%, 100% {
+    transform: scale(0.92);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.28);
+    opacity: 0.85;
+  }
+}
+
+.animate-ambient-breathe {
+  animation: ambientBreathe 7s ease-in-out infinite;
+}
+
+.animate-gentle-sway {
+  animation: gentleSway 5s ease-in-out infinite;
+}
+
+.animate-sun-rays {
+  animation: sunRaysPulse 8s ease-in-out infinite;
+}
+
+/* Stage 5 Animation Classes for HTML UI Badges & Icons */
+.animate-bloom-rotate {
+  animation: flowerBloomRotate 26s linear infinite;
+  transform-origin: center;
+}
+
+.animate-bloom-pulse {
+  animation: flowerPetalPulse 4.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Specific SVG transform-origin overrides for translated canvas groups */
+svg .animate-bloom-rotate {
+  transform-origin: 0 0;
+}
+
+svg .animate-bloom-pulse {
+  transform-origin: 0 0;
+}
+
+svg .animate-petal-breathe {
+  animation: petalIndividualBreathe 4.2s ease-in-out infinite;
+  transform-origin: 0 0;
+}
+
+svg .animate-flower-aura {
+  animation: flowerAuraGlow 4s ease-in-out infinite;
+  transform-origin: 0 0;
+}
+
+/* Prevent text drag and native callouts on mobile touch */
+* {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "PlantVoice — The Little Garden That Grows With You",
+  "description": "An emotionally engaging interactive digital garden created for DJXHack 2026 Everyday Magic. Touch a leaf, offer care, and watch your botanical sanctuary answer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
